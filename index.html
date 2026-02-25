@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nagercoil Builders</title>
+
+<style>
+
+/* ================= GLOBAL ================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: 'Georgia', serif;
+    line-height:1.6;
+    color:#222;
+}
+
+section{
+    padding:90px 8%;
+}
+
+/* ================= NAVBAR ================= */
+
+header{
+    background:#071a3d;
+    padding:15px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:white;
+    font-weight:bold;
+}
+
+.logo img{
+    width:45px;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:35px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-size:15px;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#f4b400;
+}
+
+.enquiry{
+    background:#f4b400;
+    padding:8px 18px;
+    border-radius:6px;
+    color:black !important;
+    font-weight:bold;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    height:100vh;
+    background:url('https://nagercoilbuilders.com/asset/images/Nagercoil%20Builders%20Website.png') center/cover no-repeat;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    position:relative;
+    margin-top:75px;
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.65);
+    top:0;
+    left:0;
+}
+
+.hero-content{
+    position:relative;
+    z-index:1;
+    color:white;
+    max-width:900px;
+}
+
+.hero h1{
+    font-size:50px;
+    font-weight:bold;
+}
+
+.hero h1 span{
+    color:#f4b400;
+}
+
+.hero p{
+    margin:20px 0;
+    font-size:18px;
+}
+
+.hero button{
+    background:#f4b400;
+    border:none;
+    padding:12px 30px;
+    font-size:16px;
+    border-radius:6px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+/* ================= FEATURES ================= */
+
+.features{
+    background:#f4f6fb;
+    text-align:center;
+}
+
+.features h2{
+    font-size:34px;
+    margin-bottom:60px;
+}
+
+.features h2 span{
+    color:#f4b400;
+}
+
+.feature-row{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:40px;
+}
+
+.feature-box{
+    flex:1 1 180px;
+}
+
+.circle{
+    width:160px;
+    height:160px;
+    background:#071a3d;
+    border-radius:50%;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:45px;
+    color:white;
+    transition:0.3s;
+}
+
+.feature-box:hover .circle{
+    background:#f4b400;
+    color:black;
+}
+
+.feature-box h4{
+    margin-top:20px;
+    font-size:16px;
+}
+
+/* ================= WHY SECTION ================= */
+
+.why{
+    background:#e8e6a8;
+}
+
+.why-container{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.why-column{
+    display:flex;
+    flex-direction:column;
+    gap:50px;
+}
+
+.why-item{
+    display:flex;
+    gap:20px;
+}
+
+.why-icon{
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    overflow:hidden;
+    flex-shrink:0;
+}
+
+.why-icon img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.why-text h3{
+    font-size:22px;
+    margin-bottom:8px;
+}
+
+.why-text p{
+    font-size:15px;
+}
+
+.why-image{
+    text-align:center;
+}
+
+.why-image img{
+    width:100%;
+    max-width:420px;
+}
+
+/* ================= SERVICES ================= */
+.services1{
+    max-width:900px;
+    margin:auto;
+    font-size:17px;
+}
+
+.services{
+    background:#efefef;
+    text-align:center;
+}
+
+.services h2{
+    font-size:34px;
+    margin-bottom:20px;
+}
+
+.services h2 span{
+    color:#f4b400;
+}
+
+.services p{
+    max-width:900px;
+    margin:auto;
+    font-size:17px;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#071a3d;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:992px){
+
+.why-container{
+    grid-template-columns:1fr;
+}
+
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:28px;
+}
+
+nav ul{
+    gap:15px;
+    font-size:13px;
+}
+
+.feature-row{
+    justify-content:center;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <img src="https://nagercoilbuilders.com/asset/images/logo.jpg">
+        <div>Nagercoil Builders</div>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Plan & Pricing</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#" class="enquiry">Enquiry</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Your <span>dream</span> Lorem ipsum dolor sit amet..</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, atque..</p>
+        <button>Book Now</button>
+    </div>
+</section>
+
+<section class="features">
+    <h2><span>Nagercoil</span> Builders</h2>
+
+    <div class="feature-row">
+        <div class="feature-box">
+            <div class="circle">📅</div>
+            <h4>Calendered Date</h4>
+        </div>
+        <div class="feature-box">
+            <div class="circle">⭐</div>
+            <h4>Quality Guaranteed</h4>
+        </div>
+        <div class="feature-box">
+            <div class="circle">💰</div>
+            <h4>Low Cost</h4>
+        </div>
+        <div class="feature-box">
+            <div class="circle">🏅</div>
+            <h4>Top Rated</h4>
+        </div>
+        <div class="feature-box">
+            <div class="circle">📊</div>
+            <h4>Budget Friendly</h4>
+        </div>
+    </div>
+</section>
+<section class="services1">
+    <h2><span style="text-align: center;">Why</span> choose as</h2>
+    <p>
+       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore delectus consequatur error, veritatis ab magni quae dolor magnam doloremque beatae, at cum. Blanditiis, sapiente nihil.
+    </p>
+</section>
+
+<section class="why">
+    <div class="why-container">
+
+        <div class="why-column">
+            <div class="why-item">
+                <div class="why-icon">
+                    <img src="https://nagercoilbuilders.com/asset/images/3d-cartoon-scene-depicting-variety-people-multitasking.png">
+                </div>
+                <div class="why-text">
+                    <h3>Experienced Team</h3>
+                    <p>Expert professionals delivering excellence.</p>
+                </div>
+            </div>
+
+            <div class="why-item">
+                <div class="why-icon">
+                    <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d">
+                </div>
+                <div class="why-text">
+                    <h3>Customizable Designs</h3>
+                    <p>Tailored designs matching your lifestyle.</p>
+                </div>
+            </div>
+
+            <div class="why-item">
+                <div class="why-icon">
+                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e">
+                </div>
+                <div class="why-text">
+                    <h3>Timely Completion</h3>
+                    <p>On-time delivery without compromise.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="why-image">
+            <img src="https://nagercoilbuilders.com/asset/images/9%201.png">
+        </div>
+
+        <div class="why-column">
+            <div class="why-item">
+                <div class="why-icon">
+                    <img src="https://images.unsplash.com/photo-1599423300746-b62533397364">
+                </div>
+                <div class="why-text">
+                    <h3>Quality Construction</h3>
+                    <p>Superior craftsmanship guaranteed.</p>
+                </div>
+            </div>
+
+            <div class="why-item">
+                <div class="why-icon">
+                    <img src="https://images.unsplash.com/photo-1560185127-6ed189bf02f4">
+                </div>
+                <div class="why-text">
+                    <h3>Transparent Process</h3>
+                    <p>No hidden costs, clear communication.</p>
+                </div>
+            </div>
+
+            <div class="why-item">
+                <div class="why-icon">
+                    <img src="https://nagercoilbuilders.com/asset/images/2151755755.png">
+                </div>
+                <div class="why-text">
+                    <h3>In-house Experts</h3>
+                    <p>Skilled team ensuring project precision.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="services">
+    <h2><span>Services</span> We Provide</h2>
+    <p>
+       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore delectus consequatur error, veritatis ab magni quae dolor magnam doloremque beatae, at cum. Blanditiis, sapiente nihil.
+    </p>
+</section>
+
+
+
+</body>
+</html>
